@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-function CharacterCard({ char, icon }) {
+function CharacterCard({ char, icon, isSelected, onClick }) {
   const { name, vision, nation } = char;
 
   const visionColors = {
@@ -13,8 +13,9 @@ function CharacterCard({ char, icon }) {
     Dendro: "#52b788",
   };
 
+
   return (
-    <div className="character-card">
+    <div className={`character-card ${isSelected ? "selected" : ""}` } onClick={onClick}>
       <h2>{name}</h2>
       <h3 style={{color: visionColors[vision]}}>{vision}</h3>
       <p>Nation: {nation}</p>

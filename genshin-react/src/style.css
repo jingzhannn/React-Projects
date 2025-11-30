@@ -3,6 +3,17 @@ body{
     background-color: #f0f0f0;
 }
 
+#root{
+    display: flex;
+    flex-direction: column;
+}
+
+#root img{
+    width: 150px;
+    align-self: center;
+    margin: 2em 0;
+}
+
 h1{
     text-align: center;
     margin: 2em 0 ;
@@ -25,10 +36,22 @@ h1{
     display: flex;
     flex-direction: column;
     padding: 1em;
+    cursor: pointer;
 }
 
 .character-card img{
     width: 100%;
+}
+
+.selected{
+    border: 2px solid #0077b6;
+}
+
+.selected-character-title{
+    text-align: center;
+    margin-top: 1em;
+    font-size: 2em;
+    text-transform: capitalize;
 }
 
 .vision-spinner {
